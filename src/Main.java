@@ -14,9 +14,9 @@ public class Main {
 
         //essais avec plusieurs calculs
         System.out.println("\nCalcul complexe");
-        System.out.println(calculator.soustrac(5, 2) + " " + calculator.isEqual("+") + " " + calculator.addition(30, 4444));
-        System.out.println(calculator.divise(5, 2) + calculator.isEqual("-") + calculator.multi(1, 1));
-        System.out.println(calculator.isEqual("-"));
+        System.out.println(calculator.soustrac(5,2) + calculator.addition(1, 1));
+        System.out.println(calculator.divise(5, 2) -+ calculator.multi(1, 1));
+        System.out.println(calculator.divise(5, 2) % calculator.multi(1, 1));
 
         //test de division par zero
         System.out.println("\nDivision par zéro");
