@@ -1,54 +1,29 @@
 public class Calculator {
-    private String affichNbr = "0";
-    private String operation = null;
     private double firstOperation = 0.0;
+    private double secondOperation = 0.0;
 
-    // MAJ la variable affichNbr pour afficher le chiffre saisi
-    public String isDigit(int digit) {
-        affichNbr = affichNbr.equals("0") ? Integer.toString(digit) : affichNbr + Integer.toString(digit);
-        return affichNbr;
+    public double addition(double firstOperation, double secondOperation) {
+        var addiction = firstOperation + secondOperation;
+        return addiction;
     }
 
-    // Enregistre un 1er nombre (double) puis un opérateur
-    public String isOperateur(String operator) {
-        firstOperation = Double.parseDouble(affichNbr);
-        affichNbr = "0";
-        operation = operator;
-        return affichNbr;
+    public double soustrac(double firstOperation, double secondOperation) {
+        var soustrac = firstOperation - secondOperation;
+        return soustrac;
     }
 
-    // Calcule 2 nombres avec divers opérateurs tant qu'une opération est effectuée
-    public String isEqual() {
-        double secondOperation = Double.parseDouble(affichNbr);
-        switch (operation) {
-            case "+":
-                affichNbr = Double.toString(firstOperation + secondOperation);
-                break;
-            case "-":
-                affichNbr = Double.toString(firstOperation - secondOperation);
-                break;
-            case "*":
-                affichNbr = Double.toString(firstOperation * secondOperation);
-                break;
-            case "/":
-                affichNbr = Double.toString(firstOperation / secondOperation);
-                break;
-            case "%":
-                affichNbr = Double.toString(firstOperation % secondOperation);
-                break;
-            default:
-                affichNbr = affichNbr;
-                break;
-        }
-        operation = null;
-        return affichNbr;
+    public double multi(double firstOperation, double secondOperation) {
+        var multi = firstOperation * secondOperation;
+        return multi;
     }
 
-    // Remet les premiers enregistrements à zéro
-    public String isClear() {
-        affichNbr = "0";
-        firstOperation = 0.0;
-        operation = null;
-        return affichNbr;
+    public double divise(double firstOperation, double secondOperation) {
+        var divis = firstOperation / secondOperation;
+        return divis;
+    }
+
+    public double modulo(double firstOperation, double secondOperation) {
+        var modulo = firstOperation % secondOperation;
+        return modulo;
     }
 }
